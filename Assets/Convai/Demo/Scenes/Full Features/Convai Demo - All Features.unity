@@ -136,16 +136,11 @@ PrefabInstance:
       propertyPath: <TargetObject>k__BackingField
       value: 
       objectReference: {fileID: 1994623329}
-    - target: {fileID: 2639540652976512734, guid: 2a09da1d04f25174da5f37449608e885,
+    - target: {fileID: 1456537349583445835, guid: 2a09da1d04f25174da5f37449608e885,
         type: 3}
-      propertyPath: characterID
-      value: a5a9c960-e7e4-11ef-83a8-42010a7be016
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1891797635}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -196,26 +191,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3854509766840612626, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_Speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854509766840612626, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_AutoBraking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854509766840612626, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_Acceleration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854509766840612626, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885,
         type: 3}
       propertyPath: m_Name
@@ -224,24 +199,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1085144286}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
---- !u!114 &129422508 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2639540652976512734, guid: 2a09da1d04f25174da5f37449608e885,
-    type: 3}
-  m_PrefabInstance: {fileID: 129422507}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966029596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b38e4bc919e1f040ba78aea7472893e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &918364852
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,31 +232,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &966029596 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885,
-    type: 3}
-  m_PrefabInstance: {fileID: 129422507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1085144277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885,
     type: 3}
   m_PrefabInstance: {fileID: 129422507}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1085144286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966029596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c41b5ac71474eb0aa6a650f1bd3e0a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1891797635}
 --- !u!1001 &1157219304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,11 +250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Convai Essentials
-      objectReference: {fileID: 0}
-    - target: {fileID: 6260753959023308940, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6260753959023308940, guid: 69dd98fa71bd5e649969b163d693f61b,
         type: 3}
@@ -365,141 +300,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[0].characterName
-      value: Amelia
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[3].characterName
-      value: Mike Carter
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[5].characterName
-      value: Greg
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[0].characterGameObject
-      value: 
-      objectReference: {fileID: 129422508}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[1].characterGameObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[2].characterGameObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[3].characterGameObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[4].characterGameObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[5].characterGameObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[0].characterTextColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[0].characterTextColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[1].characterTextColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[1].characterTextColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[1].characterTextColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[2].characterTextColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[2].characterTextColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[2].characterTextColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[3].characterTextColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[3].characterTextColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[3].characterTextColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[4].characterTextColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[4].characterTextColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[4].characterTextColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[5].characterTextColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[5].characterTextColor.b
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088704723449812544, guid: 69dd98fa71bd5e649969b163d693f61b,
-        type: 3}
-      propertyPath: characters.Array.data[5].characterTextColor.r
-      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
