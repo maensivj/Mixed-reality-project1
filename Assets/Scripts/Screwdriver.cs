@@ -5,14 +5,18 @@ using UnityEngine;
 public class Screwdriver : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
+        if (other.CompareTag("Screwdriver"))
+        {
+            transform.Rotate(Vector3.right * 100f * Time.deltaTime);
+            transform.position += Vector3.down * 1f * Time.deltaTime;
 
-    // Update is called once per frame
-    void Update()
+        }
+    }
+    public void RotateScrewdriver()
     {
-        
+        Debug.Log("Working");
+        transform.Rotate(Vector3.right * 100f * Time.deltaTime);
     }
 }

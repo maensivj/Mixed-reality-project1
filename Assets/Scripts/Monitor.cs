@@ -19,11 +19,18 @@ public class Monitor : MonoBehaviour
         }
     }
 
-    public void NextImage()
+    public void NextImage1()
     {
         if (images.Length == 0) return;
 
         currentIndex = (currentIndex + 1) % images.Length; 
         displayImage.sprite = images[currentIndex]; 
+    }
+    public void PrviousImage1()
+    {
+        if (images.Length == 0) return;
+
+        currentIndex = (currentIndex - 1) % images.Length;
+        displayImage.sprite = images[currentIndex];
     }
 }
