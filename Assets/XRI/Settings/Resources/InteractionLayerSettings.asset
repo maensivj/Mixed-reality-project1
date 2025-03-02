@@ -17,15 +17,15 @@ MonoBehaviour:
   - cpu
   - gpu
   - ram
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - pcPanel
+  - powerunit
+  - screw
+  - screwdriver
+  - motherboard
+  - gbu
+  - fan
+  - HDD
+  - cpufan
   - 
   - 
   - 
