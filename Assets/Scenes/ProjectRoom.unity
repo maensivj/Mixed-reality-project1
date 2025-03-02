@@ -289,21 +289,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3854509766840612626, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854509766840612626, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_AngularSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3854509766840612626, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885,
         type: 3}
       propertyPath: m_Name
@@ -312,11 +297,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1498122984}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
 --- !u!1 &102570270 stripped
 GameObject:
@@ -5057,27 +5038,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e12f80178b8d6e47a7b602b9e2f58fb, type: 3}
---- !u!1 &1498122972 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885,
-    type: 3}
-  m_PrefabInstance: {fileID: 97215213}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1498122984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498122972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d526d030017744949b7412a85e6134d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  narrativeDesignKeys:
-  - name: TimeofDay
-    value: morning
 --- !u!1001 &1508380602
 PrefabInstance:
   m_ObjectHideFlags: 0
