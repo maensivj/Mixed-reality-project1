@@ -97,6 +97,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.probuilder": {
       "version": "5.2.3",
       "depth": 0,
@@ -108,6 +109,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> parent of 4352f7f (Merge branch 'Siriwat')
     "com.unity.render-pipelines.core": {
       "version": "14.0.11",
       "depth": 1,

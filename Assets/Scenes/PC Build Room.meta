@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/PC Build Room.meta
 guid: c5b4b9260e2266f44b563b862596e648
+========
+guid: 5dc5f4bcaa133b644a81628f752f3206
+>>>>>>>> parent of 4352f7f (Merge branch 'Siriwat'):Assets/New Folder.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

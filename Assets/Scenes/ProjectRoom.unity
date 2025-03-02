@@ -222,6 +222,7 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7359826a9e9c4f8fd08564b0bdd30, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &97215213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -300,6 +301,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
+=======
+>>>>>>> parent of 4352f7f (Merge branch 'Siriwat')
 =======
 >>>>>>> parent of 4352f7f (Merge branch 'Siriwat')
 --- !u!1 &102570270 stripped
