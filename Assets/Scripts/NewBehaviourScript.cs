@@ -31,18 +31,26 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (isAtCorrectPosition)
         {
-            
-            
-            if (transform.localPosition.y > targetPos.transform.localPosition.y)
-            {
-                Debug.Log("0");
-                transform.Rotate(Vector3.forward * 150f * Time.deltaTime);
-                Debug.Log("1");
-                transform.position += new Vector3(0, -0.01f * Time.deltaTime, 0);
-                Debug.Log("2");
-            }
 
+
+            if (rb.position.y > targetPos.transform.position.y)
+            {
+                
+                transform.Rotate(Vector3.forward * 150f * Time.deltaTime);
+                rb.velocity = transform.forward * -0.5f*Time.deltaTime;
+
+            }
+            else
+            {
+                transform.Rotate(0,0,0);
+                rb.velocity = Vector3.zero;
+            }
         }
-        
+        else
+        {
+            transform.Rotate(0, 0, 0);
+            rb.velocity = Vector3.zero;
+        }
+
     }
 }
