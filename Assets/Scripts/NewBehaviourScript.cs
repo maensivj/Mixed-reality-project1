@@ -42,14 +42,19 @@ public class NewBehaviourScript : MonoBehaviour
         {
 
 
-            if (transform.position.z > targetPos.transform.position.z)
-            {
-                
-                transform.Rotate(Vector3.forward * 150f * Time.deltaTime);
-                rb.velocity = transform.forward * -0.5f * Time.deltaTime;
+            // Calculate local position difference (relative to the object's position)
+            float localYPosition = transform.localPosition.y;
+            float targetYPosition = targetPos.transform.localPosition.y;
 
+            // Only rotate and move if the object is above the target in local space
+            if (localYPosition > targetYPosition)
+            {
+                // Rotate around the object's local forward axis (local space)
+                transform.Rotate(Vector3.forward * 150f * Time.deltaTime, Space.Self); // Rotate in local space
+
+                // Apply velocity in local space, moving the object relative to its orientation
+                rb.velocity = transform.forward * -0.5f * Time.deltaTime;
             }
-            
         }
 
         else
