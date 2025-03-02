@@ -26,6 +26,15 @@ public class NewBehaviourScript : MonoBehaviour
         }
         
     }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == screwdriver)
+        {
+            isAtCorrectPosition = false;
+            Debug.Log("colliding");
+        }
+
+    }
     // Update is called once per frame
     void Update()
     {
@@ -33,24 +42,20 @@ public class NewBehaviourScript : MonoBehaviour
         {
 
 
-            if (rb.position.y > targetPos.transform.position.y)
+            if (transform.position.z > targetPos.transform.position.z)
             {
                 
                 transform.Rotate(Vector3.forward * 150f * Time.deltaTime);
-                rb.velocity = transform.forward * -0.5f*Time.deltaTime;
+                rb.velocity = transform.forward * -0.5f * Time.deltaTime;
 
             }
-            else
-            {
-                transform.Rotate(0,0,0);
-                rb.velocity = Vector3.zero;
-            }
+            
         }
+
         else
         {
             transform.Rotate(0, 0, 0);
             rb.velocity = Vector3.zero;
         }
-
     }
 }
