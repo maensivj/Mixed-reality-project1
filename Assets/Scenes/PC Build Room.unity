@@ -13165,7 +13165,7 @@ PrefabInstance:
     - target: {fileID: 1771360102896999129, guid: b34c3da86c337d04eb1aafa9a27e8d39,
         type: 3}
       propertyPath: m_Name
-      value: Convai NPC Anna Reed
+      value: Convai NPC Amelia
       objectReference: {fileID: 0}
     - target: {fileID: 7050176741382542725, guid: b34c3da86c337d04eb1aafa9a27e8d39,
         type: 3}
