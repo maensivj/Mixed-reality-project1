@@ -3369,6 +3369,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1117127418}
+    - target: {fileID: 5203082102022116550, guid: b34c3da86c337d04eb1aafa9a27e8d39,
+        type: 3}
+      propertyPath: stoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7050176741382542725, guid: b34c3da86c337d04eb1aafa9a27e8d39,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3418,6 +3423,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380384806270271666, guid: b34c3da86c337d04eb1aafa9a27e8d39,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380384806270271666, guid: b34c3da86c337d04eb1aafa9a27e8d39,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

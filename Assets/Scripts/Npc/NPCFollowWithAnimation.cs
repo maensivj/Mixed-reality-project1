@@ -1,63 +1,83 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 namespace Npc
 {
     public class NPCFollowWithAnimation : MonoBehaviour
     {
         public Transform player;  // The player's Transform
-        private UnityEngine.AI.NavMeshAgent agent;  // NavMeshAgent component
+        private NavMeshAgent agent;  // NavMeshAgent component
         private Animator animator;  // Animator component
 
-        public float rotationSpeed = 5f; // Speed of turning to face the player
-        public float rotationThreshold = 1f; // Minimum angle difference (in degrees) to trigger rotation
+        public float rotationSpeed = 5f; // Speed of turning
+        public float rotationThreshold = 1f; // Minimum angle difference to trigger rotation
+        public float stoppingDistance = 1.5f; // Distance where NPC stops moving
 
         void Start()
         {
-            // Get the required components
-            agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+            agent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
 
-            // Disable NavMeshAgent auto-rotation
+            // Disable automatic rotation from NavMeshAgent
             agent.updateRotation = false;
+            agent.stoppingDistance = stoppingDistance; // Ensure NPC stops near the player
+            
+            agent.isStopped = false; // ✅ Make sure it's not stopped
+            agent.speed = 3.5f; // ✅ Set a reasonable speed
+            agent.acceleration = 8f;
         }
 
         void Update()
         {
             if (player != null)
             {
-                // Set the destination for the NavMeshAgent
-                agent.SetDestination(player.position);
+                float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-                // Handle rotation independently of NavMeshAgent
+                // Move only if outside the stopping distance
+                if (agent.remainingDistance > agent.stoppingDistance)
+                {
+                    if (!agent.hasPath || agent.remainingDistance < 0.5f) // Update only when necessary
+                    {
+                        agent.SetDestination(player.position);
+                    }
+                }
+                else
+                {
+                    // Stop movement when close enough
+                    agent.velocity = Vector3.zero; 
+                    agent.ResetPath(); // Fully stop movement
+                }
+
+                // Rotate smoothly towards the player
                 RotateTowardsPlayer();
 
-                // Update the animator's "Speed" parameter based on the agent's velocity
-                float speed = agent.velocity.magnitude;
-                animator.SetFloat("Speed", speed);
+                // Update animation speed
+                animator.SetFloat("Speed", agent.velocity.magnitude);
             }
         }
 
         private void RotateTowardsPlayer()
         {
-            // Calculate direction to the player
-            Vector3 directionToPlayer = (player.position - transform.position).normalized;
-
-            // Ensure rotation only happens if the player is not directly in front
-            if (directionToPlayer.magnitude > 0.1f)
+            if (player != null)
             {
-                // Calculate the target rotation
-                Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+                float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-                // Calculate the angle difference
-                float angleDifference = Quaternion.Angle(transform.rotation, targetRotation);
-
-                // Only rotate if the angle difference is above the threshold
-                if (angleDifference > rotationThreshold)
+                if (agent.remainingDistance > agent.stoppingDistance)
                 {
-                    // Smoothly rotate towards the target rotation
-                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+                    if (!agent.hasPath || agent.remainingDistance < 0.5f)
+                    {
+                        Debug.Log("Setting destination: " + player.position);
+                        agent.SetDestination(player.position);
+                    }
+                }
+                else
+                {
+                    Debug.Log("Stopping movement.");
+                    agent.velocity = Vector3.zero; 
+                    agent.ResetPath();
                 }
             }
+
         }
     }
 }
